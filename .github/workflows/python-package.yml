@@ -42,9 +42,10 @@ jobs:
         echo $HOME
         docker-compose up -d 
         docker-compose ps -a
-      #  cd -
+        cd -
     - name: Docker-compose start stack 
       run: |
+        cd docker/tracker_dcs_stack
         pwd
         echo "---------------------"
         ls
