@@ -40,7 +40,7 @@ jobs:
         echo "---------------------"
         ls
         echo $HOME
-        docker-compose up -d 
+        docker-compose -f docker-compose.yml -f docker-compose.dummy.yml up -d 
         docker-compose ps -a
         cd -
    

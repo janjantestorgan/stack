@@ -40,9 +40,9 @@ jobs:
         #  run: |
         #    echo ${secrets.GITHUB_TOKEN} | docker login ghcr.io -u ${{ janjantestorgan }} --password-stdin
         #    docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-        - 
-          name: Docker  pull images
-          run: |
-            docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-            docker images
+        #- 
+        #  name: Docker  pull images
+        #  run: |
+        #    docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+        #    docker images
         

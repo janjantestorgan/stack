@@ -11,12 +11,12 @@ services:
       - mosquitto_data:/mosquitto/data
       - mosquitto_log:/mosquitto/log
       - ./mosquitto/config:/mosquitto/config
-  hv:
-    image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-    restart: always
-    links:
-      - mosquitto  
-    command: ['python', 'dummy/hv.py', 'hv', 'mosquitto']
+  #hv:
+  #  image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+  #  restart: always
+  #  links:
+  #    - mosquitto  
+  #  command: ['python', 'dummy/hv.py', 'hv', 'mosquitto']
 volumes:
   mosquitto_data:
   mosquitto_log:

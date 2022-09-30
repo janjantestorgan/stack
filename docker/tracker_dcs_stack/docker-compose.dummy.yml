@@ -1,0 +1,26 @@
+version: "3"
+services:
+  hv:
+    image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+    links:
+      - mosquitto
+    command: ['python', 'dummy/hv.py', 'hv', 'mosquitto']
+  #lv:
+  #  image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+  #  links:
+  #    - mosquitto
+  #  command: ['python', 'dummy/hv.py', 'lv', 'mosquitto']
+  #sensor_1:
+  #  image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+  #  links:
+  #    - mosquitto
+  #  command: ['python', 'dummy/sensor.py', 'sensor_1', 'mosquitto']
+  #web_server:
+  #  build: .
+  #  links:
+  #    - mosquitto
+  #  command: ['python3', 'web_server/app_test.py', 'web_server','mosquitto']
+  #  command: ['python', 'low_voltage/hmp.py', 'lw_volt', 'mosquitto']
+ 
+
+
