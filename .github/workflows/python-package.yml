@@ -51,6 +51,6 @@ jobs:
         ls
         echo $HOME
         docker-compose -f docker-compose.yml -f docker-compose.stack.yml up -d
-        docker-compose ps -a 
+        docker ps -a 
         cd - 
     
