@@ -10,11 +10,11 @@ services:
     links:
       - mosquitto
     command: ['python', 'dummy/hv.py', 'lv', 'mosquitto']
-  sensor_1:
-    image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-    links:
-      - mosquitto
-    command: ['python', 'dummy/sensor.py', 'sensor_1', 'mosquitto']
+  #sensor_1:
+  #  image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+  #  links:
+  #    - mosquitto
+  #  command: ['python', 'dummy/sensor.py', 'sensor_1', 'mosquitto']
   #web_server:
   #  build: .
   #  links:
