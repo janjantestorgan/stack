@@ -33,15 +33,14 @@ jobs:
           with:
             registry: ${{ env.REGISTRY }}
             username: ${{ github.actor }}
-          #  password: ${{ secrets.GITHUB_TOKEN }}
-        #-
-    #container:
-    #    image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-    #steps:
-        - 
-          name: docker pull
-          run: |
-            docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+            password: ${{ secrets.GITHUB_TOKEN }}
+    
+        #- 
+        #  name: Log in to GitHub Packages
+        #  run: |
+        #    echo ${secrets.GITHUB_TOKEN} | docker login ghcr.io -u ${{ janjantestorgan }} --password-stdin
+        #    docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+        #    docker-compose -f docker-compose.yml -f docker-compose.dummy.yml up -d
        # - 
        #   name: Docker-compose run to pull images
        #   run: |
