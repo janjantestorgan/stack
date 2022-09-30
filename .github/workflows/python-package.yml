@@ -40,8 +40,12 @@ jobs:
         echo "---------------------"
         ls
         echo $HOME
-        docker-compose -f docker-compose.yml -f docker-compose.dummy.yml up -d 
+        docker-compose up -d 
         docker-compose ps -a
-        cd -
-   
+      #  cd -
+    - name: Docker-compose start stack 
+      run: |
+        docker-compose -f  docker-compose.stack.yml up -d
+        docker-compose ps -a 
+        cd - 
     
