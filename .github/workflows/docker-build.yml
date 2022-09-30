@@ -42,7 +42,17 @@ jobs:
           name: docker pull
           run: |
             docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-
+        - 
+          name: Docker-compose run to pull images
+          run: |
+            cd docker/tracker_dcs_stack
+            pwd
+            echo "---------------------"
+            ls
+            echo $HOME
+            docker-compose -f docker-compose.dummy.yml up -d 
+            docker-compose ps -a
+            cd - 
         #  uses: docker/setup-buildx-action@v1
         #-
         #  name: Build and push
