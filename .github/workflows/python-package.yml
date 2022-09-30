@@ -35,7 +35,7 @@ jobs:
     
     - name: Docker-compose start mqtt 
       run: | 
-        cd docker/test_tracker_dcs_stack
+        cd docker/tracker_dcs_stack
         pwd
         echo "---------------------"
         ls
@@ -45,7 +45,7 @@ jobs:
         cd - 
     - name: Docker-compose run to pull images
       run: |
-        cd docker/test_tracker_dcs_stack
+        cd docker/tracker_dcs_stack
         pwd
         echo "---------------------"
         ls
