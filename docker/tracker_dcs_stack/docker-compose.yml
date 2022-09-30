@@ -13,6 +13,7 @@ services:
       - ./mosquitto/config:/mosquitto/config
   hv:
     image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+    restart: always
     links:
       - mosquitto  
     command: ['python', 'dummy/hv.py', 'hv', 'mosquitto']
