@@ -40,10 +40,13 @@ jobs:
         echo "---------------------"
         ls
         echo $HOME
-      #  docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
         docker-compose up -d 
         docker-compose ps -a
-        cd - 
+        cd -
+      #  docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+      #  docker-compose -f docker-compose.yml -f docker-compose.dummy.yml up -d 
+      #  docker-compose ps -a
+      #  cd - 
     #- name: Docker-compose run to pull images
     #  run: |
     #    cd docker/tracker_dcs_stack
