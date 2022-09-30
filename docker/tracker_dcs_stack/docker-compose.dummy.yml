@@ -4,12 +4,12 @@ services:
     image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
     links:
       - mosquitto
-    command: ['python', 'dummy/hv.py', 'hv', 'mosquitto']
-  lv:
-    image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-    links:
-      - mosquitto
-    command: ['python', 'dummy/hv.py', 'lv', 'mosquitto']
+  #  command: ['python', 'dummy/hv.py', 'hv', 'mosquitto']
+  #lv:
+  #  image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+  #  links:
+  #    - mosquitto
+  #  command: ['python', 'dummy/hv.py', 'lv', 'mosquitto']
   #sensor_1:
   #  image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
   #  links:
