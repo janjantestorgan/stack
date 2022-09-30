@@ -33,16 +33,16 @@ jobs:
         python3 -m pip install -r requirements/local.txt
         python3 -m pip install -e .
     
-    - name: Docker-compose start mqtt 
-      run: | 
-        cd docker/tracker_dcs_stack
-        pwd
-        echo "---------------------"
-        ls
-        echo $HOME
-        docker-compose up -d 
-        docker-compose ps -a
-        cd -
+    #- name: Docker-compose start mqtt 
+    #  run: | 
+    #    cd docker/tracker_dcs_stack
+    #    pwd
+    #    echo "---------------------"
+    #    ls
+    #    echo $HOME
+    #    docker-compose up -d 
+    #    docker-compose ps -a
+    #    cd -
     - name: Docker-compose start stack 
       run: |
         cd docker/tracker_dcs_stack
@@ -50,7 +50,7 @@ jobs:
         echo "---------------------"
         ls
         echo $HOME
-        docker-compose -f  docker-compose.stack.yml up -d
+        docker-compose -f docker-compose.yml -f docker-compose.stack.yml up -d
         docker-compose ps -a 
         cd - 
     
