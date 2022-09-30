@@ -50,9 +50,9 @@ jobs:
         echo "---------------------"
         ls
         echo $HOME
-        docker-compose -f docker-compose.dummy.yml up -d 
-        docker-compose ps -a
-        cd - 
+      #  docker-compose -f docker-compose.dummy.yml up -d 
+      #  docker-compose ps -a
+      #  cd - 
       #  python3 -m pip install pytest-cov
       #  python3 -m pytest --cov=../ --cov-report=xml
       #  ls
