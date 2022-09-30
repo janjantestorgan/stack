@@ -41,9 +41,11 @@ jobs:
         #    echo ${secrets.GITHUB_TOKEN} | docker login ghcr.io -u ${{ janjantestorgan }} --password-stdin
         #    docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
         #    docker-compose -f docker-compose.yml -f docker-compose.dummy.yml up -d
-       # - 
-       #   name: Docker-compose run to pull images
-       #   run: |
+        - 
+          name: Docker  pull images
+          run: |
+            docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+            docker images
        #     cd docker/tracker_dcs_stack
        #     pwd
        #     echo "---------------------"
