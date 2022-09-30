@@ -35,12 +35,13 @@ jobs:
             username: ${{ github.actor }}
             password: ${{ secrets.GITHUB_TOKEN }}
         #-
-    container:
-        image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-    steps:
-      - name: docker pull
-        run: |
-          docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+    #container:
+    #    image: ghcr.io/janjantestorgan/tracker_dcs_dummy:main
+    #steps:
+        - 
+          name: docker pull
+          run: |
+            docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
 
         #  uses: docker/setup-buildx-action@v1
         #-
