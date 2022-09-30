@@ -43,22 +43,5 @@ jobs:
         docker-compose up -d 
         docker-compose ps -a
         cd -
-      #  docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-      #  docker-compose -f docker-compose.yml -f docker-compose.dummy.yml up -d 
-      #  docker-compose ps -a
-      #  cd - 
-    - name: Docker-compose run to pull images
-      run: |
-        cd docker/tracker_dcs_stack
-        pwd
-        echo "---------------------"
-        ls
-        echo $HOME
-        docker-compose -f docker-compose.dummy.yml up -d 
-        docker-compose ps -a
-        cd - 
-      #  python3 -m pip install pytest-cov
-      #  python3 -m pytest --cov=../ --cov-report=xml
-      #  ls
    
     
