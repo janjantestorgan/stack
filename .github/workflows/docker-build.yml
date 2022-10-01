@@ -38,10 +38,11 @@ jobs:
             password: ${{ secrets.GITHUB_TOKEN }}
         -
           name: pull dummy low_voltage image
-          run: |
+          uses: docker/setup-buildx-action@v1
+          run:  | 
             docker pull ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME_DUMMY}}
-          #  docker pull ghcr.io/janjantestorgan/low_voltage:main
-          #  docker pull ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME_LOW_VOLTAGE}}
+            docker pull ghcr.io/janjantestorgan/low_voltage:main
+            docker pull ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME_LOW_VOLTAGE}}
             docker images
       #  -
       #    name: Set up Docker Buildx
