@@ -39,7 +39,7 @@ jobs:
         -
           name: pull dummy low_voltage image
           run: | 
-            docker pull ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME_DUMMY}}
+            docker pull ${{env.REGISTRY}}/$${{env.IMAGE_NAME}}/${{env.IMAGE_NAME_DUMMY}}
             docker pull ghcr.io/janjantestorgan/low_voltage:main
             docker pull ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME_LOW_VOLTAGE}}
             docker images
