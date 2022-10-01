@@ -42,9 +42,9 @@ jobs:
           run: |
             
             docker pull ghcr.io/janjantestorgan/tracker_dcs_dummy:main
-            docker pull {{env.REGISTRY }}/${{github.actor}}/${{env.IMAGE_NAME_DUMMY}}
+            docker pull ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME_DUMMY}}
             docker pull ghcr.io/janjantestorgan/low_voltage:main
-            docker pull {{env.REGISTRY }}/${{github.actor}}/${{env.IMAGE_NAME_LOW_VOLTAGE}}
+            docker pull ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME_LOW_VOLTAGE}}
             docker images
       #  -
       #    name: Set up Docker Buildx
