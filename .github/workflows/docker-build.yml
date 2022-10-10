@@ -50,7 +50,6 @@ jobs:
         -
           name: Set up Docker Buildx
           uses: docker/setup-buildx-action@v1
-          uses: docker/build-push-action@v2s
           with:
             context: .
             file: ./Dockerfile
