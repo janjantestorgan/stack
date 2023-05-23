@@ -26,6 +26,6 @@ services:
     image: ghcr.io/janjantestorgan/tedd_caen:main
     links:
       - mosquitto
-    #command: ['python', 'caen_hvps/hvps/hvps_ctrl.py', 'SY4527', 'mosquitto']
+    command: ['python', 'caen_hvps/hvps/hvps_ctrl.py --status --chan 0 ', 'SY4527', 'mosquitto']
 
 
