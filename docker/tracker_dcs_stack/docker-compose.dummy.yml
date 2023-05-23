@@ -19,13 +19,13 @@ services:
     image: ghcr.io/janjantestorgan/low_voltage:main
     links:
       - mosquitto
-    #command: ['python', 'low_voltage/hmp_org.py', 'lw_volt', 'mosquitto']
+    command: ['python', 'low_voltage/hmp_org.py', 'lw_volt', 'mosquitto']
   #  command: ['python3', 'web_server/app_test.py', 'web_server','mosquitto']
   #  
   caen_hvps:
-    image: docker pull ghcr.io/janjantestorgan/tedd_caen:main
+    image: ghcr.io/janjantestorgan/tedd_caen:main
     links:
       - mosquitto
-    #command: ['python', 'caen_hvps/hvps_ctrl.py', 'SY4527', 'mosquitto']
+    #command: ['python', 'caen_hvps/hvps/hvps_ctrl.py', 'SY4527', 'mosquitto']
 
 
